@@ -28,7 +28,7 @@
 
      @Test
      @DisplayName ("First test")
-     void fillFormTest() {
+     void fillFormFirstTest() {
          open("/automation-practice-form");
 
          $("#firstName").setValue(firstName);
@@ -77,4 +77,18 @@
          $(".table-responsive").shouldHave(text("NCR Delhi"));
 
      }
+
+
+ @Test
+ @DisplayName ("Second test")
+ void fillFormSecondTest() {
+     open("/text-box");
+     // Заполняем форму
+     $("#userName").setValue(firstName + " " + secondName);
+     $("#userEmail").setValue(userMail);
+     $("#currentAddress").setValue(myAddress);
+     $("#permanentAddress").setValue(myAddress + " " + phoneNumber + " " + userMail );
+     // Отправка формы
+     $("#submit").click();
+ }
  }
