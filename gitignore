@@ -1,6 +1,11 @@
 # IDE
 .idea/
 
+# Build
+build/
+target/
+out/
+
 # Compiled class file
 *.class
 
