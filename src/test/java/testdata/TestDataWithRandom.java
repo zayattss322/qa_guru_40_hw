@@ -12,15 +12,6 @@ public class TestDataWithRandom {
     static Faker faker = new Faker();
     static RandomUtils randomUtils = new RandomUtils();
 
-    private static final LocalDate BIRTH_DATE = faker.date()
-            .birthday()
-            .toInstant()
-            .atZone(ZoneId.systemDefault())
-            .toLocalDate();
-
-    public static String year = String.valueOf(BIRTH_DATE.getYear());  // Теперь будет "1990", а не "90"
-    public static String month = BIRTH_DATE.format(DateTimeFormatter.ofPattern("MMMM", Locale.ENGLISH));
-    public static String day = BIRTH_DATE.format(DateTimeFormatter.ofPattern("dd"));
 
     public static String firstName = faker.name().firstName();
     public static String secondName = faker.name().lastName();
@@ -34,6 +25,13 @@ public class TestDataWithRandom {
     public static String myFavouriteSubject = randomUtils.getRandomSubject();
     public static String state = randomUtils.getRandomState();
     public static String city = randomUtils.getRandomCity(state);
+    private static final LocalDate BIRTH_DATE = faker.date()
+            .birthday()
+            .toInstant()
+            .atZone(ZoneId.systemDefault())
+            .toLocalDate();
+    public static String year = String.valueOf(BIRTH_DATE.getYear());
+    public static String month = BIRTH_DATE.format(DateTimeFormatter.ofPattern("MMMM", Locale.ENGLISH));
+    public static String day = BIRTH_DATE.format(DateTimeFormatter.ofPattern("dd"));
 
-    public static String title = "Thanks for submitting the form";
 }
