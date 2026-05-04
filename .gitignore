@@ -6,6 +6,13 @@ build/
 target/
 out/
 
+# Gradle
+build
+.gradle
+
+# src
+/src/test/resources/*
+
 # Compiled class file
 *.class
 
