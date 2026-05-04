@@ -11,7 +11,7 @@ build
 .gradle
 
 # src
-/src/test/resources/*
+/out/test/resources/*
 
 # Compiled class file
 *.class
