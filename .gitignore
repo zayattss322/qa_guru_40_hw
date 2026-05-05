@@ -4,7 +4,7 @@
 # Build
 build/
 target/
-out/
+
 
 # Gradle
 build
@@ -12,6 +12,7 @@ build
 
 # out
 /out/test/resources/*
+out/
 
 # Compiled class file
 *.class
